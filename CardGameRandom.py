@@ -13,22 +13,22 @@ changed on your computer.
 # Card Values
 cards = ["As", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "Paus", "Ouros", "Copas", "Espadas"]
 # Separating by Suits.
-splittingNipes = []
+splittingSuits = []
 
 victories = 0
 defeats = 0
 points = open("points.txt", "r")
 
 for i in range(13):
-    splittingNipes.append(Cards(cards[i], cards[13]))
-    splittingNipes.append(Cards(cards[i], cards[14]))
-    splittingNipes.append(Cards(cards[i], cards[15]))
-    splittingNipes.append(Cards(cards[i], cards[16]))
+    splittingSuits.append(Cards(cards[i], cards[13]))
+    splittingSuits.append(Cards(cards[i], cards[14]))
+    splittingSuits.append(Cards(cards[i], cards[15]))
+    splittingSuits.append(Cards(cards[i], cards[16]))
 
 
 def Game(vt, dr):
     position = random.randint(0, 13)
-    value_random = [splittingNipes[position].get_value(), splittingNipes[position].get_suit()]
+    value_random = [splittingSuits[position].get_value(), splittingSuits[position].get_suit()]
     lifes = 15
     attempt = False
     os.system('clear') or None
