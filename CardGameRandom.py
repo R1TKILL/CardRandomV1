@@ -28,7 +28,8 @@ for i in range(13):
 
 def Game(vt, dr):
     position = random.randint(0, 13)
-    value_random = [splittingSuits[position].get_value(), splittingSuits[position].get_suit()]
+    position2 = random.randint(14, 17)
+    value_random = [splittingSuits[position].get_value(), splittingSuits[position2].get_suit()]
     lifes = 15
     attempt = False
     os.system('clear') or None
@@ -45,8 +46,8 @@ def Game(vt, dr):
         else:
             if lifes == 1:
                 os.system('clear') or None
-                print("\n\n\n\n\n\n\n\n\n\t\t\t   Que pena você Perdeu.")
-                input("\n\n\t\t\t<<Pressione enter para continuar>>")
+                print("\n\n\n\n\n\t\tQue pena você Perdeu.")
+                input("\n\n\t   <<Pressione enter para continuar>>")
                 dr += 1
                 break
 
